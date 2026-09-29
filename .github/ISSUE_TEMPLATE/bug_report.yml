@@ -1,0 +1,84 @@
+name: Bug report
+description: Report unexpected Eklab behavior with a minimal reproduction.
+title: '[Bug] '
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This report and its attachments will be public. Use synthetic examples and remove secrets, personal information and customer code.
+        For suspected security vulnerabilities, use [private reporting](https://github.com/ekdev-labs/eklab-support/security/advisories/new).
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
+        - label: This is not a security vulnerability report and contains no confidential data.
+          required: true
+  - type: input
+    id: packages
+    attributes:
+      label: Eklab packages and exact versions
+      description: Include every installed Eklab package involved in the problem. Do not paste a complete private lockfile.
+    validations:
+      required: true
+  - type: dropdown
+    id: integration
+    attributes:
+      label: Integration
+      options:
+        - Native HTML
+        - Angular
+        - React
+        - Framework-independent or unsure
+    validations:
+      required: true
+  - type: input
+    id: area
+    attributes:
+      label: Affected component or area
+      description: Use the actual component name, themes, consumer skill, installation or documentation.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Framework version, browser/version and OS; include Node/build-tool versions for installation or build problems.
+    validations:
+      required: true
+  - type: input
+    id: theme
+    attributes:
+      label: Theme or relevant styling
+      description: Light, dark, scoped theme or synthetic overrides. Do not attach confidential customer theme files.
+    validations:
+      required: false
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction and steps
+      description: Paste a small synthetic example and numbered steps, or link to a public reproduction you are allowed to share. A separate repository is optional.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional screenshots or relevant logs
+      description: Include only the relevant sanitized excerpt. Review attachments for sensitive data before submitting.
+    validations:
+      required: false
