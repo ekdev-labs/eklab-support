@@ -1,0 +1,58 @@
+name: Component request
+description: Request a component that Eklab does not yet provide.
+title: '[Component] '
+labels: [enhancement, component-request, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing requests first. If the component has already been requested, add a 👍 reaction to that issue's opening post and describe any additional use case in a comment.
+        This request will be public. Do not include customer code, secrets or confidential designs.
+        Votes help prioritize work; requests do not imply a delivery commitment. No pull request is needed.
+  - type: input
+    id: component
+    attributes:
+      label: Component name
+      description: Use a short, descriptive name.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would this help your users do?
+      description: Describe a concrete task and why existing controls or components do not meet the need.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Essential behavior
+      description: Describe the interactions and states you need, including keyboard or accessibility needs where relevant. An API design is not required.
+    validations:
+      required: true
+  - type: dropdown
+    id: integrations
+    attributes:
+      label: Intended integrations
+      multiple: true
+      options:
+        - Native HTML
+        - Angular
+        - React
+        - Framework-independent or unsure
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current workaround or public examples
+      description: Optional synthetic examples or public references you are allowed to share.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing requests and removed confidential information.
+          required: true

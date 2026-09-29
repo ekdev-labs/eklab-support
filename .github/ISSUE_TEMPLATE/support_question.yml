@@ -1,0 +1,52 @@
+name: Support question
+description: Ask for help with Eklab installation, themes or usage.
+title: '[Support] '
+labels: [support, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask a usage question here. Use Bug report for unexpected behavior, or Component request / Feature request to suggest something new.
+        This question and its attachments will be public. Remove secrets, personal information and customer code.
+        For suspected security vulnerabilities, use [private reporting](https://github.com/ekdev-labs/eklab-support/security/advisories/new).
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      description: Describe what you are trying to achieve and where you need guidance.
+    validations:
+      required: true
+  - type: input
+    id: packages
+    attributes:
+      label: Eklab packages and versions
+      description: Include exact versions where installed, or state that this is a question before installation. Do not paste a private lockfile.
+    validations:
+      required: true
+  - type: dropdown
+    id: integration
+    attributes:
+      label: Integration
+      options:
+        - Native HTML
+        - Angular
+        - React
+        - Framework-independent or unsure
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: What have you tried?
+      description: Include relevant documentation, framework/browser versions and a small synthetic example if helpful.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and the available documentation.
+          required: true
+        - label: This is not a security vulnerability report and contains no confidential data.
+          required: true

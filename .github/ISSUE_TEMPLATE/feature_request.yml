@@ -1,11 +1,14 @@
 name: Feature request
-description: Explain a use case that Eklab does not currently address.
+description: Suggest an improvement to an existing Eklab capability or documentation.
 title: '[Feature] '
 labels: [enhancement, needs-triage]
 body:
   - type: markdown
     attributes:
-      value: This request will be public. Use synthetic examples and do not include confidential material. Requests do not imply a delivery commitment.
+      value: |
+        For a new component, use the Component request form instead.
+        Search existing requests first and add a 👍 reaction to the opening post of a matching request instead of creating a duplicate.
+        This request will be public. Use synthetic examples and do not include confidential material. Requests do not imply a delivery commitment.
   - type: textarea
     id: problem
     attributes:
